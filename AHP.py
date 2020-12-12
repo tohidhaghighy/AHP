@@ -47,6 +47,12 @@ class AHP:
             return "CI/RI < 0.1 is {} and consistent".format(consistency/RI[len(matrix)])
         return "CI/RI > 0.1 is {} and consistent".format(consistency/RI[len(matrix)])
 
+    def Calculate_alternative_all_criteria(Self,alt_cri_matrix,criterias_weight,arternative_count):
+        ranking=alt_cri_matrix*criterias_weight.reshape(arternative_count, 1)
+        return ranking
+
+
+
 
 if __name__ == "__main__":
     goal=str(input("The Goal is : "))
@@ -62,15 +68,15 @@ if __name__ == "__main__":
 
     print("------------------------------------------")
 
-    #alternative_count=int(input("Alternative count is : "))
-    #list_of_alternative=ahp.make_matrix(alternative_count,"alternative")
-    #matrix_criteria_alternative=ahp.make_alternative_matrix(list_of_criteria,list_of_alternative,"Relative Alternative vs Criteria ")
+    alternative_count=int(input("Alternative count is : "))
+    list_of_alternative=ahp.make_matrix(alternative_count,"alternative")
+    matrix_criteria_alternative=ahp.make_alternative_matrix(list_of_criteria,list_of_alternative,"Relative Alternative vs Criteria ")
 
-    #print(matrix_criteria_alternative)
+    print(matrix_criteria_alternative)
 
     
-    #criteria_matreix=ahp.Calculate_Pairwise(matrix_criteria)
+    criteria_matreix=ahp.Calculate_Pairwise(matrix_criteria)
+
+    print(matrix_criteria_alternative.dot(criteria_matreix.reshape(criteria_count, 1)))
 
 
-    #print(ahp.goal)
-    #print(ahp.make_criteria_matrix(list_of_criteria))
