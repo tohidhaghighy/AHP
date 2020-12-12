@@ -1,2 +1,4 @@
 # AHP
 Analytical Hierarchy process for decision
+
+The analytic hierarchy process (AHP) is a structured technique for organizing and analyzing complex decisions, based on mathematics and psychology. It was developed by Thomas L. Saaty in the 1970s who partnered with Ernest Forman to develop Expert Choice in 1983, and has been extensively studied and refined since then. It represents an accurate approach for quantifying the weights of decision criteria. Individual experts’ experiences are utilized to estimate the relative magnitudes of factors through pair-wise comparisons. Each of the respondents has to compare the relative importance between the two items under special designed questionnaire (note that while most of the surveys adopted the five point likert scale, AHP's questionnaire is 9 to 1 to 9, see Li et al
